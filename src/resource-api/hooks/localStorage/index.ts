@@ -1,0 +1,7 @@
+const useLocalStoreage = () => {
+
+
+}
+export {
+  useLocalStoreage
+}
