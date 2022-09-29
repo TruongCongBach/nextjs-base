@@ -1,1 +1,5 @@
-export const ResourceApiProvider = getProvider()
+import ResourceApiProvider  from './Provider'
+
+export {
+  ResourceApiProvider
+}

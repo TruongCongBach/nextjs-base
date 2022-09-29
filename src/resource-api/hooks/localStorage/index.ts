@@ -1,7 +1,8 @@
-const useLocalStoreage = () => {
+import storageFC from './storage'
+import useLocalStorage from './useLocalStorage'
 
 
-}
 export {
-  useLocalStoreage
+  useLocalStorage,
+  storageFC
 }
