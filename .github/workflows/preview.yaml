@@ -3,7 +3,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   FUK_VARIABLE: ${{ vars.FUK_VARIABLE }}
-  env_var: ${{ vars.ENV_CONTEXT_VAR }}
+  ENV_CONTEXT_VAR: ${{ vars.ENV_CONTEXT_VAR }}
   ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
   ENVIRONMENT_STAGE: ${{ vars.ENVIRONMENT_STAGE }}
 on:
@@ -23,9 +23,9 @@ jobs:
           echo "repository variable : $REPOSITORY_VAR"
           echo "organization variable : $ORGANIZATION_VAR"
           echo "overridden variable : $OVERRIDE_VAR"
-          echo "variable from shell environment : $env_var"
-          echo "variable from shell environment : $ENVIRONMENT_STAGE"
-          echo "variable from shell environment : $FUK_VARIABLE"
+          echo "variable from shell $ENV_CONTEXT_VAR : $ENV_CONTEXT_VAR"
+          echo "variable from shell $ENVIRONMENT_STAGE : $ENVIRONMENT_STAGE"
+          echo "variable from shell $FUK_VARIABLE : $FUK_VARIABLE"
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
           ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
