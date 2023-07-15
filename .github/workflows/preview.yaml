@@ -26,6 +26,7 @@ jobs:
           echo "variable from shell $ENVIRONMENT_STAGE : $ENVIRONMENT_STAGE"
           echo "variable from shell $FUK_VARIABLE : $FUK_VARIABLE"
           echo "variable from shell vars : ${{ toJSON(vars) }}"
+          echo "variable from shell vars : ${{ toJSON(env) }}"
           echo vars
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
