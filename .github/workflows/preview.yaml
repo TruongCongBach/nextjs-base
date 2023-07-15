@@ -27,7 +27,7 @@ jobs:
           echo "variable from shell $ENVIRONMENT_STAGE : $ENVIRONMENT_STAGE"
           echo "variable from shell $FUK_VARIABLE : $FUK_VARIABLE"
           echo "variable from shell vars : ${{ vars }}"
-          echo "variable from shell vars : ${{ vars }}"
+          echo vars
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
           ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
