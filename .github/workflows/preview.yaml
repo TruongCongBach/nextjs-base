@@ -16,7 +16,6 @@ jobs:
     name: ${{ vars.JOB_NAME }}
     # You can use configuration variables with the `vars` context for dynamic jobs
     runs-on: ubuntu-latest
-    environment: ${{ vars.ENVIRONMENT_STAGE }}
     steps:
       - name: Use variables
         run: |
