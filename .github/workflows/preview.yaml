@@ -5,7 +5,7 @@ env:
   FUK_VARIABLE: ${{ vars.FUK_VARIABLE }}
   env_var: ${{ vars.ENV_CONTEXT_VAR }}
   ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
-  ORGANIZATION_VAR2: ${{ vars.ORGANIZATION_VAR }}
+  ENVIRONMENT_STAGE: ${{ vars.ENVIRONMENT_STAGE }}
 on:
   push:
     branches:
@@ -24,9 +24,8 @@ jobs:
           echo "organization variable : $ORGANIZATION_VAR"
           echo "overridden variable : $OVERRIDE_VAR"
           echo "variable from shell environment : $env_var"
-          echo "variable from shell environment : ${{ vars.ORGANIZATION_VAR }}"
-          echo "variable from shell environment : ${{ vars }}"
-          echo "variable from shell environment : ${{ vars }}"
+          echo "variable from shell environment : $ENVIRONMENT_STAGE"
+          echo "variable from shell environment : $FUK_VARIABLE"
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
           ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
