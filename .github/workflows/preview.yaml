@@ -1,10 +1,4 @@
 name: Vercel Preview Deployment
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-  FUK_VARIABLE: ${{ vars.FUK_VARIABLE }}
-  ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
-  ENVIRONMENT_STAGE: ${{ vars.ENVIRONMENT_STAGE }}
 on:
   push:
     branches:
@@ -30,13 +24,12 @@ jobs:
           echo vars
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
-          ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
+          ORGANIZATION_VAR333: ${{ vars.ORGANIZATION_VAR }}
           OVERRIDE_VAR: ${{ vars.OVERRIDE_VAR }}
 
-      - name: ${{ vars.HELLO_WORLD_STEP }}
-        if: ${{ vars.HELLO_WORLD_ENABLED == 'true' }}
-        uses: actions/hello-world-javascript-action@main
-        with:
-          who-to-greet: ${{ vars.GREET_NAME }}
+      - name: after Set ENV
+        run: |
+          echo "after set env : ${{ toJSON(env) }}"
+        
 
 
