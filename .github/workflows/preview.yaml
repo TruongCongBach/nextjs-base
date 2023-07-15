@@ -4,6 +4,8 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   FUK_VARIABLE: ${{ vars.FUK_VARIABLE }}
   env_var: ${{ vars.ENV_CONTEXT_VAR }}
+  ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
+  ORGANIZATION_VAR2: ${{ env.ORGANIZATION_VAR }}
 on:
   push:
     branches:
