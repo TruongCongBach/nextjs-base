@@ -16,6 +16,7 @@ jobs:
     name: ${{ vars.JOB_NAME }}
     # You can use configuration variables with the `vars` context for dynamic jobs
     runs-on: ubuntu-latest
+    environment: ${{ vars.ENVIRONMENT_STAGE }}
     steps:
       - name: Use variables
         run: |
@@ -23,6 +24,9 @@ jobs:
           echo "organization variable : $ORGANIZATION_VAR"
           echo "overridden variable : $OVERRIDE_VAR"
           echo "variable from shell environment : $env_var"
+          echo "variable from shell environment : ${{ vars.ORGANIZATION_VAR }}"
+          echo "variable from shell environment : ${{ vars }}"
+          echo "variable from shell environment : ${{ vars }}"
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
           ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
