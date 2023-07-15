@@ -5,7 +5,7 @@ env:
   FUK_VARIABLE: ${{ vars.FUK_VARIABLE }}
   env_var: ${{ vars.ENV_CONTEXT_VAR }}
   ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
-  ORGANIZATION_VAR2: ${{ env.ORGANIZATION_VAR }}
+  ORGANIZATION_VAR2: ${{ vars.ORGANIZATION_VAR }}
 on:
   push:
     branches:
