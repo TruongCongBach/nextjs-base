@@ -2,7 +2,7 @@ import { BasicLayout } from '../layout'
 import React from 'react'
 
 function Home() {
-  return <div>Home page
+  return <div>Home page2
     <br/>
 
   </div>
