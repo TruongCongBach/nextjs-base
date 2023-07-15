@@ -3,6 +3,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   FUK_VARIABLE: ${{ vars.FUK_VARIABLE }}
+  env_var: ${{ vars.ENV_CONTEXT_VAR }}
 on:
   push:
     branches:
@@ -15,6 +16,7 @@ jobs:
       - name: "Say Hello Mona it's Monday"
         run: |
           echo "repository variable : $FUK_VARIABLE"
+          echo "repository variable : $ENV_CONTEXT_VAR"
           echo "organization variable : $ORGANIZATION_VAR"
           echo "overridden variable : $OVERRIDE_VAR"
           echo "variable from shell environment : $env_var"
