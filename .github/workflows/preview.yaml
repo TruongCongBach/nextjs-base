@@ -26,7 +26,7 @@ jobs:
           echo "variable from shell $ENV_CONTEXT_VAR : $ENV_CONTEXT_VAR"
           echo "variable from shell $ENVIRONMENT_STAGE : $ENVIRONMENT_STAGE"
           echo "variable from shell $FUK_VARIABLE : $FUK_VARIABLE"
-          echo "variable from shell vars : ${{ vars.toString() }}"
+          echo "variable from shell vars : ${{ vars }}"
           echo "variable from shell vars : ${{ vars }}"
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
