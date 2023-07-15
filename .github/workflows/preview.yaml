@@ -9,6 +9,16 @@ on:
       - dev
       - develop/*
 jobs:
+  Check-env-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        run: |
+          echo "repository variable : $FUK_VARIABLE"
+          echo "organization variable : $ORGANIZATION_VAR"
+          echo "overridden variable : $OVERRIDE_VAR"
+          echo "variable from shell environment : $env_var"
+
   Deploy-Preview:
     runs-on: ubuntu-latest
     steps:
