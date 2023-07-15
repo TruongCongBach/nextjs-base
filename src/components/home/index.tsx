@@ -1,5 +1,8 @@
 import { BasicLayout } from '../layout'
 import React from 'react'
+import getConfig from 'next/config'
+
+const { publicRuntimeConfig } = getConfig()
 
 function Home() {
   return <div>
@@ -7,7 +10,7 @@ function Home() {
     Home page1111
     <br/>
     <hr/>
-    {process.env.FUK_VARIABLE}
+    {JSON.stringify(publicRuntimeConfig)}
     <hr/>
   </div>
 }
