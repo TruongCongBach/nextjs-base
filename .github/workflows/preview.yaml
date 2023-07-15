@@ -6,7 +6,6 @@ env:
   ENV_CONTEXT_VAR: ${{ vars.ENV_CONTEXT_VAR }}
   ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
   ENVIRONMENT_STAGE: ${{ vars.ENVIRONMENT_STAGE }}
-  ENV_CONTEXT: ${{ env.ENV_CONTEXT_VAR }}
 on:
   push:
     branches:
@@ -27,7 +26,7 @@ jobs:
           echo "variable from shell $ENV_CONTEXT_VAR : $ENV_CONTEXT_VAR"
           echo "variable from shell $ENVIRONMENT_STAGE : $ENVIRONMENT_STAGE"
           echo "variable from shell $FUK_VARIABLE : $FUK_VARIABLE"
-          echo "variable from shell ENV_CONTEXT : $ENV_CONTEXT"
+          echo "variable from shell vars : ${{ vars.toString }}"
         env:
           REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
           ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
