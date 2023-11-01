@@ -15,11 +15,11 @@ export async function getServerSideProps() {
     console.log(4, error)
   })
 
-  fs.readFile(path.join('public', 'locales', `common.json`)).then(res => {
-    console.log(4, res)
-  }).catch(error => {
-    console.log(5, error)
-  })
+  // fs.readFile(path.join('public', 'locales', `common.json`)).then(res => {
+  //   console.log(4, res)
+  // }).catch(error => {
+  //   console.log(5, error)
+  // })
   return { props: {} }
 }
 
