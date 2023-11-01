@@ -15,8 +15,8 @@ export async function getServerSideProps() {
     console.log(4, error)
   })
 
-  fs.readFile(path.join('public', 'locales', `common.json`)).then(res => {
-    console.log(4, res)
+  fs.readFile(path.join('public', 'locales', `common.json`)).then((res:any) => {
+    console.log(4, JSON.parse(res))
   }).catch(error => {
     console.log(5, error)
   })
