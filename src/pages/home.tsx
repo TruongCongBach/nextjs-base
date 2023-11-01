@@ -9,7 +9,7 @@ export async function getServerSideProps() {
     console.log(2, error)
   })
 
-  fs.readFile(path.join('public', 'locales', 'nl', `common.json`)).then((res:any) => {
+  fs.readFile(path.join('public', 'locales', 'de', `common.json`)).then((res:any) => {
     console.log(3, JSON.parse(res))
   }).catch(error => {
     console.log(4, error)
