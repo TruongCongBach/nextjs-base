@@ -8,18 +8,20 @@ export async function getServerSideProps() {
   }).catch(error => {
     console.log(2, error)
   })
-  console.log('de', path.join(process.cwd()))
-  await fs.readFile(path.join('public', 'locales', 'de', `common.json`)).then((res:any) => {
-    console.log(3, JSON.parse(res))
-  }).catch(error => {
-    console.log(4, error)
-  })
   console.log('nl', path.join(process.cwd()))
   await fs.readFile(path.join('public', 'locales','nl', `common.json`)).then((res:any) => {
     console.log(4, JSON.parse(res))
   }).catch(error => {
     console.log(5, error)
   })
+
+  console.log('de', path.join(process.cwd()))
+  await fs.readFile(path.join('public', 'locales', 'de', `common.json`)).then((res:any) => {
+    console.log(3, JSON.parse(res))
+  }).catch(error => {
+    console.log(4, error)
+  })
+
   return { props: {} }
 }
 
