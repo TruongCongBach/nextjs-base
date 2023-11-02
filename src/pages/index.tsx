@@ -6,7 +6,7 @@ export async function getStaticProps() {
   fs.writeFile(
     path.join(process.cwd(), 'public','locales','de',`common.json`),
     JSON.stringify({
-      "description": "description test bach"
+      "description": "description dev quen"
     })
   ).then(res => {
     console.log('index '+ 1, res)
