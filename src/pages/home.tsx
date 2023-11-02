@@ -21,6 +21,12 @@ export async function getServerSideProps() {
   }).catch(error => {
     console.log(4, error)
   })
+  console.log('than', path.join(process.cwd()))
+  await fs.readFile(path.join('public', 'locales', 'than', `common.json`)).then((res:any) => {
+    console.log('than', JSON.parse(res))
+  }).catch(error => {
+    console.log('than', error)
+  })
 
   return { props: {} }
 }
