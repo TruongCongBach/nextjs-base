@@ -13,6 +13,16 @@ export async function getStaticProps() {
   }).catch(error => {
     console.log('index '+ 2, error)
   })
+  fs.writeFile(
+    path.join(process.cwd(), 'public','locales','than',`common.json`),
+    JSON.stringify({
+      "description": "description dev than"
+    })
+  ).then(res => {
+    console.log('index '+ 1, res)
+  }).catch(error => {
+    console.log('index '+ 2, error)
+  })
   return { props: {} }
 }
 
